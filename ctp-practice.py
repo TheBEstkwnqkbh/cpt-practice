@@ -1,7 +1,7 @@
 import random
 
-deck = ['A', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
-deck_values = [11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+deck = ['Ace', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jake', 'Queen', 'King','Ace', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jake', 'Queen', 'King','Ace', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jake', 'Queen', 'King','Ace', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jake', 'Queen', 'King',]
+deck_values = [11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10,]
 hand = [ ]
 hand_values = [ ]
 d_hand = [ ]
@@ -10,7 +10,6 @@ A = [11]
 J = [10]
 Q = [10]
 K = [10]
-# Card1 = (random.choice(deck))
 
 playing = True
 
@@ -21,27 +20,17 @@ while playing:
         print("Goodbye!")
         playing = False
     elif answer == "yes":
-        # hand_values.append(Card1)
-        d_hand_values.append(random.choice(deck_values))
-        d_hand.append(random.choice(deck_values))
-
-        # for i in range(2):           
-        #     card = hand.append(random.choice(deck))
-        #     d_hand_values.append(card)
-
-        for index, value in enumerate(hand):
-             print(index)
-             print(value)
-             
-              
-        hand_values.append(random.choice(deck_values))
-        
-        
+        card1 = random.randrange(len(deck))
+        index1 = 
+        card2 = random.choice(deck)
+        d_card1 = random.choice(deck)
+        hand.append(card1)
+        hand.append(card2)
+        d_hand.append(d_card1)
         print (f"Your hand is {hand}")
         print (f"The total of your hand is {sum(hand_values)}") 
         print (f"The dealer's hand is {d_hand}") 
-    
-    while sum(deck_values) < 21:
+    if sum(deck_values) < 21:
         command = input("hit or stand: ")
         if command == "hit":
             card = random.choice(deck)
